@@ -1,0 +1,13 @@
+FROM python:3.9-alpine3.12
+
+RUN apk add redis
+
+WORKDIR /app/api
+
+COPY api/ /app/api
+
+RUN pip install -r requirements.txt
+
+EXPOSE 8080
+
+CMD sh -c "redis-server --daemonize yes && python main.py"
