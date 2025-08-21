@@ -1,5 +1,5 @@
 ---
-backendURL: "http://localhost"
+backendURL: "http://api-container-compose"
 backendPort: "8080"
 domainName: "http://localhost:8080"
 #http://kubernetes.docker.internal:8080
